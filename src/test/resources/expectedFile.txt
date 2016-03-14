@@ -1,0 +1,21 @@
+=== Version information
+Version : 1.0.0
+
+=== Contact information
+Contact : apiteam@swagger.io
+
+=== License information
+License : Apache 2.0
+License URL : http://www.apache.org/licenses/LICENSE-2.0.html
+Terms of service : http://helloreverb.com/terms/
+
+=== URI scheme
+Host : petstore.swagger.io
+BasePath : /v2
+Schemes : HTTP
+
+=== Tags
+
+* pet : Pet resource
+* store : Store resource
+* user : User resource

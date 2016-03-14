@@ -8,7 +8,7 @@ buildscript {
         classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
     }
 }
-description = 'AssertJ assertions for diffing strings and files. '
+description = 'AssertJ assertions for diffing strings and files.'
 version = '0.1.0'
 group = 'io.github.robwin'
 
@@ -32,8 +32,11 @@ repositories {
 }
 
 dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.18'
     compile 'org.assertj:assertj-core:2.2.0'
     compile 'com.sksamuel.diff:diff:1.1.11'
+    compile "commons-io:commons-io:2.4"
+    testCompile "junit:junit:4.11"
 }
 
 

@@ -1,0 +1,71 @@
+= assertj-diff
+:author: Robert Winkler
+:version: 0.1.0
+:hardbreaks:
+
+== Overview
+
+This library provides AssertJ assertions for diffing strings and files. If a test fails, it generates an HTML report.
+
+The project requires at least JDK 7.
+
+=== Usage
+=== Adding MarkupDocBuilder to your project
+The project is published in JCenter and Maven Central.
+
+==== Maven
+
+[source,xml, subs="specialcharacters,attributes"]
+----
+<repositories>
+    <repository>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+        <id>central</id>
+        <name>bintray</name>
+        <url>http://jcenter.bintray.com</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>io.github.robwin</groupId>
+    <artifactId>assertj-diff</artifactId>
+    <version>{version}</version>
+</dependency>
+----
+
+==== Gradle
+
+[source,groovy, subs="attributes"]
+----
+repositories {
+    jcenter()
+}
+
+compile "io.github.robwin:assertj-diff:{version}"
+----
+
+=== Using assertj-diff
+
+You can compare two files by providing the path to the actual file and to the expected file.
+
+[source,java]
+----
+DiffAssertions.assertThat(actualFilePath).isEqualTo(expectedFilePath, reportPath)
+----
+
+If the test fails, assertj-diff generates a HTML into the given reportPath.
+
+image::docs/images/diff-result.png[]
+
+== License
+
+Copyright 2015 Robert Winkler
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+

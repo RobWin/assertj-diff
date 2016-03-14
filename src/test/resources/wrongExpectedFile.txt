@@ -1,0 +1,16 @@
+=== Version information
+Version : 1.0.0
+
+=== Contact information
+Contact : apiteam@swagger.io
+
+=== URI scheme
+Host : petstore.swagger.io
+BasePath : /v2
+Schemes : HTTP
+
+=== Tags
+
+* pet : Pet resource
+* store : Store resource
+* user : User resource

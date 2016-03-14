@@ -8,6 +8,10 @@ Date buildTimeAndDate = new Date()
 ext {
     buildDate = new SimpleDateFormat('yyyy-MM-dd').format(buildTimeAndDate)
     buildTime = new SimpleDateFormat('HH:mm:ss.SSSZ').format(buildTimeAndDate)
+    projectUrl = 'https://github.com/RobWin/assertj-diff'
+    licenseUrl = 'https://github.com/RobWin/assertj-diff/blob/master/LICENSE.txt'
+    scmUrl = 'https://github.com/RobWin/assertj-diff.git'
+    issueTrackerUrl = 'https://github.com/RobWin/assertj-diff/issues'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
@@ -61,17 +65,17 @@ publishing {
                     it.scope*.value = 'compile'
                 }
 
-                root.appendNode('name', 'swagger2markup')
+                root.appendNode('name', project.name)
                 root.appendNode('packaging', 'jar')
-                root.appendNode('url', 'https://github.com/Swagger2Markup/swagger2markup')
-                root.appendNode('description', 'A Swagger to Markup (AsciiDoc and Markdown) converter.')
+                root.appendNode('url', projectUrl)
+                root.appendNode('description', project.description)
 
                 def license = root.appendNode('licenses').appendNode('license')
                 license.appendNode('name', 'Apache-2.0')
-                license.appendNode('url', 'https://github.com/Swagger2Markup/swagger2markup/blob/master/LICENSE.txt')
+                license.appendNode('url', licenseUrl)
                 license.appendNode('distribution', 'repo')
 
-                root.appendNode('scm').appendNode('url', 'https://github.com/Swagger2Markup/swagger2markup.git')
+                root.appendNode('scm').appendNode('url', scmUrl)
 
                 def developers = root.appendNode('developers')
                 devs.each {
@@ -95,9 +99,9 @@ bintray {
     pkg {
         repo = 'maven'
         name = 'swagger2markup'
-        websiteUrl = 'https://github.com/Swagger2Markup/swagger2markup'
-        issueTrackerUrl = 'https://github.com/Swagger2Markup/swagger2markup/issues'
-        vcsUrl = 'https://github.com/Swagger2Markup/swagger2markup.git'
+        websiteUrl = projectUrl
+        issueTrackerUrl = issueTrackerUrl
+        vcsUrl = scmUrl
         desc = rootProject.description
         licenses = ['Apache-2.0']
         version {
