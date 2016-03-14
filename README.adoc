@@ -52,10 +52,16 @@ You can compare two files by providing the path to the actual file and to the ex
 
 [source,java]
 ----
+Path actualFile = Paths.get(DiffAssertTest.class.getResource("/actualFile.txt").toURI());
+Path expectedFile = Paths.get(DiffAssertTest.class.getResource("/expectedFile.txt").toURI());
+Path reportPath = Paths.get("build/diff-result.txt");
+
 DiffAssertions.assertThat(actualFilePath).isEqualTo(expectedFilePath, reportPath)
 ----
 
 If the test fails, assertj-diff generates a HTML into the given reportPath.
+
+==== Report Example
 
 image::docs/images/diff-result.png[]
 
