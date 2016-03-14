@@ -7,7 +7,7 @@ image:https://travis-ci.org/RobWin/assertj-diff.svg?branch=master["Build Status"
 
 == Overview
 
-This library provides AssertJ assertions for diffing strings and files. If a test fails, it generates an HTML report.
+This library provides AssertJ assertions for diffing files. If a test fails, it generates an HTML report.
 
 The project requires at least JDK 7.
 
