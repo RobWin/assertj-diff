@@ -3,6 +3,8 @@
 :version: 0.1.0
 :hardbreaks:
 
+image:https://travis-ci.org/RobWin/assertj-diff.svg?branch=master["Build Status", link="https://travis-ci.org/RobWin/assertj-diff"] image:http://img.shields.io/badge/license-ASF2-blue.svg["Apache License 2", link="http://www.apache.org/licenses/LICENSE-2.0.txt"] image:https://img.shields.io/badge/Twitter-rbrtwnklr-blue.svg["Twitter", link="https://twitter.com/rbrtwnklr"]
+
 == Overview
 
 This library provides AssertJ assertions for diffing strings and files. If a test fails, it generates an HTML report.
