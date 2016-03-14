@@ -11,7 +11,7 @@ ext {
     projectUrl = 'https://github.com/RobWin/assertj-diff'
     licenseUrl = 'https://github.com/RobWin/assertj-diff/blob/master/LICENSE.txt'
     scmUrl = 'https://github.com/RobWin/assertj-diff.git'
-    issueTrackerUrl = 'https://github.com/RobWin/assertj-diff/issues'
+    issuesUrl = 'https://github.com/RobWin/assertj-diff/issues'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
@@ -98,9 +98,9 @@ bintray {
     publications = ['mavenJava']
     pkg {
         repo = 'maven'
-        name = 'swagger2markup'
+        name = project.name
         websiteUrl = projectUrl
-        issueTrackerUrl = issueTrackerUrl
+        issueTrackerUrl = issuesUrl
         vcsUrl = scmUrl
         desc = rootProject.description
         licenses = ['Apache-2.0']
